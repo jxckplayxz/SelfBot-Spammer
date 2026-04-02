@@ -3,20 +3,20 @@ import requests
 import threading
 
 # Tu Token
-TOKEN = "Token_Here"
+TOKEN = "MTQ4NjM2MzUyNzI5MDY4MzQ2Mw.GNzaaS.qIjYgF1sOq7N19SjsLOsYA0IygjeN60ABcS124"
 
 # IDs de los canales a los que quieres hacer spam
 CHANNEL_IDS = [
-    "12345678910",  # Canal 1
-    "12345678910",  # Canal 2
-    "12345678910"   # Canal 3
+    "1426761744935813163",  # Canal 1
+    "1426761744935813163",  # Canal 2
+    "1426761744935813163"   # Canal 3
 ]
 
 # Mensaje a enviar
-MESSAGE = "[ ||@everyone|| ]\n ### SelfBot ⌗ 🦇 C47CH-404🦇\n > **OWNED BY ⌗ 🦇 C47CH-404🦇**\n https://media1.tenor.com/m/mXibMXSiN1wAAAAd/pirates-pirate.gif https://discord.gg/KK4besj8WC"
+MESSAGE = ""
 
 # Cantidad de mensajes
-AMOUNT = 20
+AMOUNT = 20000
 
 HEADERS = {
     "Authorization": TOKEN,
