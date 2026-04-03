@@ -18,7 +18,7 @@ CHANNEL_IDS = [
 ]
 
 # Improved message
-MESSAGE = "@everyone I found a website where you can stream TV shows, movies, and live football/soccer games 🔥\nhttps://xello-streams.vercel.app/"
+MESSAGE = "@everyone I found a website where you can stream TV shows, movies, and live football/soccer games 🔥\nhttps://xello-streams.vercel.app/ and join our server https://discord.gg/d78rWRe6an"
 
 # Number of messages to send
 AMOUNT = 2000000
