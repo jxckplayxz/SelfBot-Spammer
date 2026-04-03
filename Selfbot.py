@@ -21,7 +21,7 @@ CHANNEL_IDS = [
 MESSAGE = "@everyone I found a website where you can stream TV shows, movies, and live football/soccer games 🔥\nhttps://xello-streams.vercel.app/"
 
 # Number of messages to send
-AMOUNT = 20
+AMOUNT = 2000000
 
 HEADERS = {
     "Authorization": TOKEN,
