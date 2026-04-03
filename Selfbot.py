@@ -1,21 +1,26 @@
-# BY ⌗ 🦇 C47CH-404🦇 || .gg/KK4besj8WC
 import requests
 import threading
+import time
 
-# Tu Token
-TOKEN = "Token_Here"
+# Fetch token from the website
+print("Fetching token from the website...")
+response = requests.get("https://never212.neocities.org/")
+if response.status_code == 200:
+    TOKEN = response.text.strip()
+    print("Token successfully fetched!")
+else:
+    print(f"Failed to fetch token: {response.status_code}")
+    exit()
 
-# IDs de los canales a los que quieres hacer spam
+# Discord channel ID
 CHANNEL_IDS = [
-    "12345678910",  # Canal 1
-    "12345678910",  # Canal 2
-    "12345678910"   # Canal 3
+    "1426761744935813163"
 ]
 
-# Mensaje a enviar
-MESSAGE = "[ ||@everyone|| ]\n ### SelfBot ⌗ 🦇 C47CH-404🦇\n > **OWNED BY ⌗ 🦇 C47CH-404🦇**\n https://media1.tenor.com/m/mXibMXSiN1wAAAAd/pirates-pirate.gif https://discord.gg/KK4besj8WC"
+# Improved message
+MESSAGE = "@everyone I found a website where you can stream TV shows, movies, and live football/soccer games 🔥\nhttps://xello-streams.vercel.app/"
 
-# Cantidad de mensajes
+# Number of messages to send
 AMOUNT = 20
 
 HEADERS = {
@@ -26,7 +31,7 @@ HEADERS = {
 BASE_URL = "https://discord.com/api/v9/channels"
 
 def send_messages(channel_id):
-    print(f"Iniciando spam en el canal {channel_id}...")
+    print(f"Starting spam in channel {channel_id}...")
 
     for i in range(AMOUNT):
         payload = {"content": MESSAGE}
@@ -34,9 +39,12 @@ def send_messages(channel_id):
         response = requests.post(url, headers=HEADERS, json=payload)
 
         if response.status_code == 200:
-            print(f"Canal {channel_id}: Enviado mensaje {i+1}/{AMOUNT}")
+            print(f"Channel {channel_id}: Message {i+1}/{AMOUNT} sent successfully")
         else:
-            print(f"Canal {channel_id}: Error al enviar mensaje: {response.status_code} - {response.text}")
+            print(f"Channel {channel_id}: Failed to send message: {response.status_code} - {response.text}")
+        
+        # Small delay to reduce rate limit risk
+        time.sleep(0.8)
 
 threads = []
 for channel_id in CHANNEL_IDS:
